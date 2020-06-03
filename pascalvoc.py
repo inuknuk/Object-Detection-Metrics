@@ -331,9 +331,9 @@ detections = evaluator.PlotPrecisionRecallCurve(
     showGraphic=showPlot)
 
 f = open(os.path.join(savePath, 'results.txt'), 'w')
-f.write('Object Detection Metrics\n')
-f.write('https://github.com/rafaelpadilla/Object-Detection-Metrics\n\n\n')
-f.write('Average Precision (AP), Precision and Recall per class:')
+f.write('Object Detection Metrics\n\n')
+f.write('IOU thershold that tells if a detection is TP or FP is : %s' % iouThreshold)
+f.write('\nAverage Precision (AP), Precision and Recall per class:')
 
 # each detection is a class
 for metricsPerClass in detections:
